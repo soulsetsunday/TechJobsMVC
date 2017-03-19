@@ -34,9 +34,6 @@
 
     // TODO #2 - Loop over jobs dictionary and display all job fields
     
-        @*
-        @for (int i = 0; i < ViewBag.jobs.Count; i++)
-        *@
     @foreach (Dictionary<string, string> job in ViewBag.jobs)
     {
         <table class="job-listing">
