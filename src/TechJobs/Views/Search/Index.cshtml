@@ -32,5 +32,13 @@
 
     <h3>@ViewBag.jobs.Count Result(s)</h3>
 
-    // TODO #2 - Loop over jobs dictionary and display all job fields 
+    // TODO #2 - Loop over jobs dictionary and display all job fields
+    <table class= "job-listing">
+        @for (int i = 0; i < ViewBag.jobs.Count; i++)
+        {
+            <tr class="@( i % 2 == 0 ? "even" : "odd" ) ">
+                <td><a asp-controller="List" asp-action="Jobs" asp-route-column="@ViewBag.column" asp-route-value="@ViewBag.items[i]">@ViewBag.items[i]</a></td>
+            </tr>
+        }
+    </table>
 }

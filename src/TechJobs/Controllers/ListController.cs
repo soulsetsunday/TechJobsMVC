@@ -27,6 +27,8 @@ namespace TechJobs.Controllers
             return View();
         }
 
+      
+
         public IActionResult Values(string column)
         {
             if (column.Equals("all"))
